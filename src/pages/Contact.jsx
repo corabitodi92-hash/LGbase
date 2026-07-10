@@ -1,92 +1,155 @@
 import { motion } from 'framer-motion';
-import { FiMapPin, FiPhone, FiMail, FiSend } from 'react-icons/fi';
+import { FiMapPin, FiPhone, FiMail, FiSend, FiClock, FiMessageCircle } from 'react-icons/fi';
 
 export default function Contact() {
   return (
-    <div className="py-16 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl font-extrabold text-scout-green mb-4">Contactez-nous</h1>
-          <p className="text-xl text-gray-600">Nous sommes à votre écoute pour toute question ou demande d'adhésion.</p>
-        </motion.div>
+    <div className="min-h-screen bg-white">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {/* ── EN-TÊTE ── */}
+      <section className="relative py-24 text-center overflow-hidden bg-gradient-to-br from-scout-green/10 via-white to-scout-orange/5">
+        <div className="absolute top-0 right-1/4 w-64 h-64 rounded-full bg-scout-green/5 blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-48 h-48 rounded-full bg-scout-orange/5 blur-3xl" />
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative"
+        >
+          <span className="inline-block px-4 py-1.5 rounded-full bg-scout-green/10 text-scout-green text-sm font-bold mb-4 tracking-wide uppercase">
+            Contact
+          </span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            Contactez-<span className="text-gradient-green">nous</span>
+          </h1>
+          <div className="w-16 h-1 bg-gradient-to-r from-scout-green to-scout-orange mx-auto rounded-full mb-6" />
+          <p className="text-lg text-gray-500 max-w-xl mx-auto px-4">
+            Nous sommes à votre écoute pour toute question ou demande d'adhésion.
+          </p>
+        </motion.div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+
           {/* Contact Info */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-scout-green rounded-3xl p-8 lg:p-12 text-white shadow-xl relative overflow-hidden"
+            className="lg:col-span-2 bg-gradient-to-br from-scout-green to-scout-dark rounded-3xl p-8 lg:p-10 text-white shadow-2xl shadow-scout-green/20 relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white opacity-10"></div>
-            <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 rounded-full bg-scout-orange opacity-20"></div>
-            
-            <h2 className="text-3xl font-bold mb-8 relative z-10">Informations</h2>
-            
-            <div className="space-y-8 relative z-10">
-              <div className="flex items-start gap-4">
-                <div className="bg-white/20 p-3 rounded-full">
-                  <FiMapPin className="text-2xl" />
+            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white/5" />
+            <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 rounded-full bg-scout-orange/10" />
+
+            <h2 className="text-2xl font-bold mb-2 relative z-10">Informations</h2>
+            <p className="text-white/50 text-sm mb-8 relative z-10">Retrouvez-nous via ces coordonnées</p>
+
+            <div className="space-y-6 relative z-10">
+              <div className="flex items-start gap-4 group">
+                <div className="bg-white/10 p-3 rounded-2xl group-hover:bg-scout-orange/80 transition-colors duration-300">
+                  <FiMapPin className="text-xl" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Adresse</h3>
-                  <p className="text-white/80">Paroisse EEC, Province Djiri<br/>Brazzaville, République du Congo</p>
+                  <h3 className="font-bold mb-1">Adresse</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">Paroisse EEC, Province Djiri<br />Brazzaville, République du Congo</p>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-white/20 p-3 rounded-full">
-                  <FiPhone className="text-2xl" />
+
+              <div className="flex items-start gap-4 group">
+                <div className="bg-white/10 p-3 rounded-2xl group-hover:bg-scout-orange/80 transition-colors duration-300">
+                  <FiPhone className="text-xl" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Téléphone</h3>
-                  <p className="text-white/80">+242 00 000 00 00<br/>+242 00 000 00 00</p>
+                  <h3 className="font-bold mb-1">Téléphone</h3>
+                  <p className="text-white/60 text-sm">+242 00 000 00 00</p>
+                  <p className="text-white/60 text-sm">+242 00 000 00 00</p>
                 </div>
               </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-white/20 p-3 rounded-full">
-                  <FiMail className="text-2xl" />
+
+              <div className="flex items-start gap-4 group">
+                <div className="bg-white/10 p-3 rounded-2xl group-hover:bg-scout-orange/80 transition-colors duration-300">
+                  <FiMail className="text-xl" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-1">Email</h3>
-                  <p className="text-white/80">contact@scouts-loulendo.cg</p>
+                  <h3 className="font-bold mb-1">Email</h3>
+                  <p className="text-white/60 text-sm">contact@scouts-loulendo.cg</p>
                 </div>
               </div>
+
+              <div className="flex items-start gap-4 group">
+                <div className="bg-white/10 p-3 rounded-2xl group-hover:bg-scout-orange/80 transition-colors duration-300">
+                  <FiClock className="text-xl" />
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">Horaires</h3>
+                  <p className="text-white/60 text-sm">Sam - Dim: 8h00 - 17h00</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mini chat */}
+            <div className="mt-8 p-4 bg-white/5 rounded-2xl border border-white/10 relative z-10">
+              <div className="flex items-center gap-2 mb-2">
+                <FiMessageCircle className="text-scout-yellow" />
+                <span className="text-sm font-bold">Réponse rapide</span>
+              </div>
+              <p className="text-white/50 text-xs">Nous répondons généralement sous 24h</p>
             </div>
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100"
+            className="lg:col-span-3 bg-gray-50 rounded-3xl p-8 lg:p-10 shadow-sm border border-gray-100"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Envoyez un message</h2>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 rounded-2xl bg-scout-green/10 text-scout-green">
+                <FiSend className="text-xl" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">Envoyez un message</h2>
+                <p className="text-gray-500 text-sm">Remplissez le formulaire ci-dessous</p>
+              </div>
+            </div>
+
+            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Nom complet</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-scout-green focus:border-transparent transition-all" placeholder="Votre nom" />
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Nom complet</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-scout-green/30 focus:border-scout-green transition-all duration-200 text-sm"
+                    placeholder="Votre nom"
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-scout-green focus:border-transparent transition-all" placeholder="Votre email" />
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-scout-green/30 focus:border-scout-green transition-all duration-200 text-sm"
+                    placeholder="Votre email"
+                  />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
-                <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-scout-green focus:border-transparent transition-all" placeholder="Sujet de votre message" />
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Sujet</label>
+                <input
+                  type="text"
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-scout-green/30 focus:border-scout-green transition-all duration-200 text-sm"
+                  placeholder="Sujet de votre message"
+                />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea rows="5" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-scout-green focus:border-transparent transition-all resize-none" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                <textarea
+                  rows="5"
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-scout-green/30 focus:border-scout-green transition-all duration-200 resize-none text-sm"
+                  placeholder="Comment pouvons-nous vous aider ?"
+                />
               </div>
-              <button className="w-full bg-scout-orange text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:bg-scout-yellow hover:text-scout-green transition-all shadow-md">
-                Envoyer le message <FiSend />
+              <button className="w-full bg-scout-orange text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-scout-yellow hover:text-scout-green transition-all duration-300 shadow-lg shadow-scout-orange/20 hover:shadow-xl hover:shadow-scout-orange/30 hover:-translate-y-0.5">
+                Envoyer le message
+                <FiSend />
               </button>
             </form>
           </motion.div>

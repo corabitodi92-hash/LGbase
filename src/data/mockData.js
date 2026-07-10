@@ -20,9 +20,26 @@ export const documentsData = [
   { id: 3, type: 'Excel', nom: 'Budget Camp 2025', taille: '120 KB', date: '10/03/2025' },
 ];
 
+import img1 from '../assets/EVENEMENI IMAGE/DSC_4771.JPG';
+import img2 from '../assets/EVENEMENI IMAGE/DSC_4772.JPG';
+import img3 from '../assets/EVENEMENI IMAGE/DSC_4773.JPG';
+import img4 from '../assets/EVENEMENI IMAGE/DSC_4774.JPG';
+import img5 from '../assets/EVENEMENI IMAGE/DSC_4858.JPG';
+import img6 from '../assets/EVENEMENI IMAGE/DSC_4859.JPG';
+import img7 from '../assets/EVENEMENI IMAGE/DSC_4860.JPG';
+import img8 from '../assets/EVENEMENI IMAGE/DSC_4861.JPG';
+import img9 from '../assets/EVENEMENI IMAGE/DSC_4882.JPG';
+import img10 from '../assets/EVENEMENI IMAGE/DSC_4883.JPG';
+
 export const photosData = [
-  { src: 'https://placehold.co/800x600/008A3D/FFF?text=Photo+1', title: 'Rassemblement', description: 'Cérémonie des couleurs' },
-  { src: 'https://placehold.co/800x600/E67200/FFF?text=Photo+2', title: 'Feu de camp', description: 'Veillée scoute' },
-  { src: 'https://placehold.co/800x600/FFC000/FFF?text=Photo+3', title: 'Formation', description: 'Apprentissage des nœuds' },
-  { src: 'https://placehold.co/800x600/333333/FFF?text=Photo+4', title: 'Exploration', description: 'Randonnée en forêt' },
+  { src: img1, title: 'Rassemblement', description: 'Cérémonie des couleurs' },
+  { src: img2, title: 'Feu de camp', description: 'Veillée scoute' },
+  { src: img3, title: 'Formation', description: 'Apprentissage des nœuds' },
+  { src: img4, title: 'Exploration', description: 'Randonnée en forêt' },
+  { src: img5, title: 'Activité', description: 'Moment scout' },
+  { src: img6, title: 'Cérémonie', description: 'Passage de grade' },
+  { src: img7, title: 'Camp', description: 'Campement scout' },
+  { src: img8, title: 'Groupe', description: 'Photo de groupe' },
+  { src: img9, title: 'Jeunesse', description: 'Jeunes scouts' },
+  { src: img10, title: 'Engagement', description: 'Service communautaire' },
 ];
