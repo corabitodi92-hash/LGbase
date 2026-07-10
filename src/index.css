@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-scout-green: #008A3D; /* Vert forêt profond */
+  --color-scout-orange: #E67200; /* Orange dynamique */
+  --color-scout-yellow: #FFC000; /* Jaune éclatant */
+  --color-scout-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-scout-white text-gray-800 antialiased font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-scout-green;
+  }
+}
