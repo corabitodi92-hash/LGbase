@@ -76,17 +76,25 @@ export default function PhotoGallery() {
               className="relative group rounded-2xl overflow-hidden shadow-sm bg-gray-100 cursor-pointer aspect-square border border-gray-100 hover:shadow-xl transition-all duration-300"
               onClick={() => handleOpenLightbox(index)}
             >
-              <img
-                src={photo.src}
-                alt={photo.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
+              {photo.type === 'video' ? (
+                <video src={photo.src} className="w-full aspect-square object-cover" />
+              ) : (
+                <img
+                  src={photo.src}
+                  alt={photo.title}
+                  className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              )}
+              {/* Caption below the media */}
+              <div className="p-2 text-center bg-white/90 backdrop-blur-sm">
+                <h3 className="font-bold text-lg text-gray-800">{photo.title}</h3>
+                <p className="text-sm text-gray-600">{photo.description}</p>
+              </div>
+              {/* Overlay for zoom/download */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
                 <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-3 border border-white/20 group-hover:scale-110 transition-transform">
                   <FiZoomIn className="text-xl" />
                 </div>
-                <h3 className="font-bold text-lg">{photo.title}</h3>
-                <p className="text-sm text-white/70">{photo.description}</p>
                 <button
                   onClick={(e) => { e.stopPropagation(); window.open(photo.src, '_blank'); }}
                   className="mt-3 p-2 bg-scout-orange/80 backdrop-blur-sm rounded-full hover:bg-scout-orange transition-colors border border-white/20"

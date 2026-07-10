@@ -47,8 +47,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
-              Discipline, unité, foi, amour, service, fraternité et engagement. Nous formons la jeunesse de demain avec les valeurs du scoutisme.
-            </p>
+  Amour, Unité, Foi
+</p>
             <div className="flex space-x-3">
               {socials.map((social) => (
                 <a
@@ -132,14 +132,10 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/30 text-sm">
+        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col items-center gap-4">
+          <p className="text-white/30 text-sm text-center">
             &copy; {new Date().getFullYear()} LG La Base &mdash; Groupe Scout Loulendo Gabriel. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-2 text-white/30 text-sm">
-            <span className="w-2 h-2 rounded-full bg-scout-green animate-pulse" />
-            Conçu pour l'avenir.
-          </div>
         </div>
       </div>
     </footer>

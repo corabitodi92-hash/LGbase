@@ -77,7 +77,7 @@ export default function Navbar() {
                   className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                     isActive
                       ? 'bg-scout-orange text-white shadow-md shadow-scout-orange/30'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      : 'text-scout-green hover:text-scout-green hover:bg-white/10'
                   }`}
                 >
                   {link.name}
@@ -154,7 +154,7 @@ export default function Navbar() {
                       className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
                         isActive
                           ? 'bg-scout-orange text-white shadow-md'
-                          : 'text-white/80 hover:bg-white/10 hover:text-white'
+                          : 'text-scout-green hover:bg-white/10 hover:text-scout-green'
                       }`}
                     >
                       {link.name}

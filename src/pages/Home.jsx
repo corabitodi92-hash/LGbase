@@ -19,7 +19,7 @@ import img10 from '../assets/EVENEMENI IMAGE/DSC_4883.JPG';
 const carouselImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
 const sloganWords = [
-  'Discipline', 'Unité', 'Foi', 'Amour', 'Service', 'Fraternité', 'Engagement'
+    'Amour','Unité', 'Foi'
 ];
 
 const stats = [
