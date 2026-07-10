@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import logo from '../assets/LOGO_LOULENDO.jpg';
+import provinceLogo from '../assets/logoprovince.jpeg';
+import churchLogo from '../assets/logoeglise.jpeg';
 import img1 from '../assets/EVENEMENI IMAGE/DSC_4771.JPG';
 import img2 from '../assets/EVENEMENI IMAGE/DSC_4772.JPG';
 import img3 from '../assets/EVENEMENI IMAGE/DSC_4773.JPG';
@@ -174,20 +176,53 @@ export default function Home() {
         {/* Contenu Hero */}
         <div className="container mx-auto px-4 z-10 text-center flex flex-col items-center pt-10">
 
-          {/* Logo animé avec glow */}
-          <motion.div
-            initial={{ y: -60, opacity: 0, scale: 0.7 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative mb-8"
-          >
-            <div className="absolute inset-0 rounded-full bg-scout-orange/20 blur-3xl animate-pulse-glow" />
-            <img
-              src={logo}
-              alt="Logo LG La Base"
-              className="relative w-40 h-40 md:w-56 md:h-56 object-contain rounded-full bg-white/10 backdrop-blur-sm p-3 shadow-2xl border-2 border-white/20"
-            />
-          </motion.div>
+          {/* Logos côte à côte */}
+          <div className="flex items-center justify-center gap-8 mb-8">
+  {/* Logo de l'église (gauche) */}
+  <motion.div
+    initial={{ y: -40, opacity: 0, scale: 0.7 }}
+    animate={{ y: 0, opacity: 1, scale: 1 }}
+    transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+    className="relative"
+  >
+    <div className="absolute inset-0 rounded-full bg-scout-green/20 blur-3xl animate-pulse-glow" />
+    <img
+      src={churchLogo}
+      alt="Logo Église"
+      className="relative w-32 h-32 md:w-44 md:h-44 object-contain rounded-full bg-white/10 backdrop-blur-sm p-2 shadow-xl border-2 border-white/20"
+    />
+  </motion.div>
+
+  {/* Logo du groupe (central, légèrement plus haut) */}
+  <motion.div
+    initial={{ y: -80, opacity: 0, scale: 0.7 }}
+    animate={{ y: 0, opacity: 1, scale: 1 }}
+    transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+    className="relative"
+  >
+    <div className="absolute inset-0 rounded-full bg-scout-orange/20 blur-3xl animate-pulse-glow" />
+    <img
+      src={logo}
+      alt="Logo LG La Base"
+      className="relative w-40 h-40 md:w-56 md:h-56 object-contain rounded-full bg-white/10 backdrop-blur-sm p-3 shadow-2xl border-2 border-white/20"
+    />
+  </motion.div>
+
+  {/* Logo de la province (droite) */}
+  <motion.div
+    initial={{ y: -40, opacity: 0, scale: 0.7 }}
+    animate={{ y: 0, opacity: 1, scale: 1 }}
+    transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+    className="relative"
+  >
+    <div className="absolute inset-0 rounded-full bg-scout-green/20 blur-3xl animate-pulse-glow" />
+    <img
+      src={provinceLogo}
+      alt="Logo Province"
+      className="relative w-32 h-32 md:w-44 md:h-44 object-contain rounded-full bg-white/10 backdrop-blur-sm p-2 shadow-xl border-2 border-white/20"
+    />
+  </motion.div>
+</div>
 
           {/* Titre */}
           <motion.h1
