@@ -126,3 +126,19 @@
   0%, 100% { box-shadow: 0 0 20px rgba(0, 138, 61, 0.3); }
   50% { box-shadow: 0 0 40px rgba(0, 138, 61, 0.6); }
 }
+@layer utilities {
+  /* Existing utilities ... */
+  .hero-section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    /* Subtle zoom animation */
+    animation: subtle-zoom 30s ease-in-out infinite alternate;
+  }
+  @keyframes subtle-zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+}
