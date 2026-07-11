@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiActivity, FiDownload, FiChevronLeft, FiChevronRight, FiUsers, FiCalendar, FiAward, FiHeart } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
+import { Scale, Users, Cross, Heart, Leaf, UsersRound, Zap } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
 import logo from '../assets/LOGO_LOULENDO.jpg';
@@ -34,13 +35,13 @@ const stats = [
 ];
 
 const valeurs = [
-  { label: 'Discipline', icon: '⚖️', color: '#008A3D', desc: 'Se discipliner soi-même pour devenir le meilleur version de soi et servir les autres avec rigueur.' },
-  { label: 'Unité', icon: '🤝', color: '#E67200', desc: 'Unis, nous formons une seule famille capable de relever tous les défis ensemble.' },
-  { label: 'Foi', icon: '✝️', color: '#008A3D', desc: 'Ancrés dans la foi chrétienne, nous marchons avec confiance vers l\'avenir.' },
-  { label: 'Amour', icon: '❤️', color: '#E67200', desc: 'L\'amour du prochain guide chacun de nos gestes et de nos actions quotidiennes.' },
-  { label: 'Service', icon: '🌿', color: '#008A3D', desc: 'Servir la communauté sans compter, c\'est au cœur de notre mission scoute.' },
-  { label: 'Fraternité', icon: '👥', color: '#E67200', desc: 'Le lien fraternel nous unis au-delà des différences, dans le respect mutuel.' },
-  { label: 'Engagement', icon: '🌟', color: '#008A3D', desc: 'Nous nous engageons pleinement pour un monde plus juste et plus solidaire.' },
+  { label: 'Discipline', icon: <Scale size={24} className="text-[#166534]" />, color: '#008A3D', desc: 'Se discipliner soi-même pour devenir le meilleur version de soi et servir les autres avec rigueur.' },
+  { label: 'Unité', icon: <Users size={24} className="text-[#22C55E]" />, color: '#E67200', desc: 'Unis, nous formons une seule famille capable de relever tous les défis ensemble.' },
+  { label: 'Foi', icon: <Cross size={24} className="text-[#166534]" />, color: '#008A3D', desc: "Ancrés dans la foi chrétienne, nous marchons avec confiance vers l'avenir." },
+  { label: 'Amour', icon: <Heart size={24} className="text-[#EA580C]" />, color: '#E67200', desc: "L'amour du prochain guide chacun de nos gestes et de nos actions quotidiennes." },
+  { label: 'Service', icon: <Leaf size={24} className="text-[#166534]" />, color: '#008A3D', desc: "Servir la communauté sans compter, c'est au cœur de notre mission scoute." },
+  { label: 'Fraternité', icon: <UsersRound size={24} className="text-[#22C55E]" />, color: '#E67200', desc: "Le lien fraternel nous unis au-delà des différences, dans le respect mutuel." },
+  { label: 'Engagement', icon: <Zap size={24} className="text-[#166534]" />, color: '#008A3D', desc: 'Nous nous engageons pleinement pour un monde plus juste et plus solidaire.' },
 ];
 
 function FlipCard({ val, index }) {
@@ -177,55 +178,19 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,138,61,0.15)_0%,transparent_60%)]" />
 
         {/* Contenu Hero */}
-        <div className="container mx-auto px-4 z-10 text-center flex flex-col items-center pt-10">
+        <div className="container mx-auto px-4 z-20 text-center flex flex-col items-center pt-10 pb-20 min-h-screen">
 
-          {/* Logos côte à côte */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-8">
-            {/* Logo de l'église (gauche) */}
-            <motion.div
-              initial={{ y: -40, opacity: 0, scale: 0.7 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="relative"
-            >
-              <div className="absolute inset-0 rounded-full bg-scout-green/20 blur-3xl animate-pulse-glow" />
-                <img
-                  src={churchLogo}
-                  alt="Logo Église"
-                  className="relative w-56 h-56 object-cover rounded-full"
-                />
-            </motion.div>
-
-            {/* Logo du groupe (central) */}
-            <motion.div
-              initial={{ y: -80, opacity: 0, scale: 0.7 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="relative"
-            >
-              <div className="absolute inset-0 rounded-full bg-scout-orange/20 blur-3xl animate-pulse-glow" />
-                <img
-                  src={logo}
-                  alt="Logo LG La Base"
-                  className="relative w-56 h-56 object-cover rounded-full shadow-2xl border-2 border-white/20"
-                />
-            </motion.div>
-
-            {/* Logo de la province (droite) */}
-            <motion.div
-              initial={{ y: -40, opacity: 0, scale: 0.7 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="relative"
-            >
-              <div className="absolute inset-0 rounded-full bg-scout-green/20 blur-3xl animate-pulse-glow" />
-              <img
-                src={provinceLogo}
-                alt="Logo Province"
-                className="relative w-56 h-56 object-contain rounded-full shadow-xl border-2 border-white/20 transform translate-y-2 scale-110"
-              />
-            </motion.div>
-          </div>
+          {/* Logos scrolling marquee */}
+          <div className="relative overflow-hidden h-56 flex items-center justify-center mask-fade logo-marquee">
+  <motion.div className="flex gap-8" animate={{ x: ['0%', '-100%'] }} transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}>
+    {[churchLogo, logo, provinceLogo].map((src, idx) => (
+      <motion.div key={idx} className="relative">
+        <div className="absolute inset-0 rounded-full bg-scout-green/20 blur-3xl animate-pulse-glow" />
+        <img src={src} alt={idx === 0 ? 'Logo Église' : idx === 1 ? 'Logo LG La Base' : 'Logo Province'} className="relative w-56 h-56 object-cover rounded-full" />
+      </motion.div>
+    ))}
+  </motion.div>
+</div>
 
           {/* Titre */}
           <motion.h1
@@ -278,7 +243,7 @@ export default function Home() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.5 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 z-20"
           >
             <Link
               to="/a-propos"
