@@ -22,31 +22,31 @@ export default function PhotoGallery() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-scout-dark text-scout-text-primary">
 
       {/* ── EN-TÊTE ── */}
-      <section className="relative py-24 text-center overflow-hidden bg-gradient-to-br from-scout-green/10 via-white to-scout-orange/5">
-        <div className="absolute top-0 right-1/4 w-64 h-64 rounded-full bg-scout-green/5 blur-3xl" />
+      <section className="relative py-24 text-center overflow-hidden bg-gradient-to-br from-scout-orange/5 via-scout-dark to-scout-dark-card/30">
+        <div className="absolute top-0 right-1/4 w-64 h-64 rounded-full bg-scout-orange/5 blur-3xl" />
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-scout-green/10 text-scout-green text-sm font-bold mb-4 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-scout-orange/15 text-scout-orange text-sm font-bold mb-4 tracking-wide uppercase">
             Galerie
           </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-            Galerie <span className="text-gradient-green">Photos</span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+            Galerie <span className="text-gradient-orange">Photos</span>
           </h1>
-          <div className="w-16 h-1 bg-gradient-to-r from-scout-green to-scout-orange mx-auto rounded-full mb-8" />
+          <div className="w-16 h-1 bg-gradient-to-r from-scout-orange to-scout-green mx-auto rounded-full mb-8" />
           <div className="max-w-md mx-auto relative px-4">
             <div className="absolute inset-y-0 left-7 pl-4 flex items-center pointer-events-none">
-              <FiSearch className="text-gray-400" />
+              <FiSearch className="text-gray-500" />
             </div>
             <input
               type="text"
-              className="block w-full pl-12 pr-4 py-3.5 border border-gray-200 rounded-full leading-5 bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-scout-green/20 focus:border-scout-green transition-all duration-200 text-sm"
+              className="block w-full pl-12 pr-4 py-3.5 border border-white/10 rounded-full leading-5 bg-scout-dark-card text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-scout-orange/20 focus:border-scout-orange transition-all duration-200 text-sm"
               placeholder="Rechercher une photo..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -54,7 +54,7 @@ export default function PhotoGallery() {
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm('')}
-                className="absolute inset-y-0 right-7 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                className="absolute inset-y-0 right-7 pr-3 flex items-center text-gray-500 hover:text-white"
               >
                 <FiX size={16} />
               </button>
@@ -73,7 +73,7 @@ export default function PhotoGallery() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               key={index}
-              className="relative group rounded-2xl overflow-hidden shadow-sm bg-gray-100 cursor-pointer aspect-square border border-gray-100 hover:shadow-xl transition-all duration-300"
+              className="relative group rounded-2xl overflow-hidden shadow-sm bg-scout-dark-card cursor-pointer aspect-square border border-white/5 hover:border-scout-orange/20 transition-all duration-300"
               onClick={() => handleOpenLightbox(index)}
             >
               {photo.type === 'video' ? (
@@ -86,18 +86,18 @@ export default function PhotoGallery() {
                 />
               )}
               {/* Caption below the media */}
-              <div className="p-2 text-center bg-white/90 backdrop-blur-sm">
-                <h3 className="font-bold text-lg text-gray-800">{photo.title}</h3>
-                <p className="text-sm text-gray-600">{photo.description}</p>
+              <div className="p-2 text-center bg-scout-dark-card/95 backdrop-blur-sm border-t border-white/5">
+                <h3 className="font-bold text-base text-white">{photo.title}</h3>
+                <p className="text-xs text-scout-text-secondary">{photo.description}</p>
               </div>
               {/* Overlay for zoom/download */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
                 <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-3 border border-white/20 group-hover:scale-110 transition-transform">
                   <FiZoomIn className="text-xl" />
                 </div>
                 <button
                   onClick={(e) => { e.stopPropagation(); window.open(photo.src, '_blank'); }}
-                  className="mt-3 p-2 bg-scout-orange/80 backdrop-blur-sm rounded-full hover:bg-scout-orange transition-colors border border-white/20"
+                  className="mt-3 p-2 bg-scout-orange hover:bg-scout-orange-hover rounded-full transition-colors border border-white/20"
                   title="Télécharger"
                 >
                   <FiDownload size={14} />
@@ -108,7 +108,7 @@ export default function PhotoGallery() {
         </motion.div>
 
         {filteredPhotos.length === 0 && (
-          <div className="text-center py-20 text-gray-500">
+          <div className="text-center py-20 text-scout-text-secondary">
             <div className="text-5xl mb-4">📷</div>
             <p className="text-lg">Aucune photo ne correspond à votre recherche.</p>
           </div>
