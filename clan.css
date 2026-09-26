@@ -1110,6 +1110,29 @@ a {
     color: var(--route-dark);
 }
 
+.history-stat-group {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.history-stat-group .history-stat {
+    margin-top: 0;
+}
+
+.history-stat-label {
+    margin-top: 14px;
+
+    color: var(--route);
+    font-weight: 800;
+
+    text-align: center;
+}
+
 
 /* =========================================================
    ANIMATIONS AU SURVOL
