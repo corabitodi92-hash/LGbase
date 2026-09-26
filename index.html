@@ -1,14 +1,292 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/src/assets/LOGO_LOULENDO.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="LG La Base - Groupe Scout Loulendo Gabriel, Province Djiri, Église Évangélique du Congo" />
-    <title>LG La Base</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Province de Djiri - Scouts du Congo-Brazzaville</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Arrière-plan principal très visible : deux_drapeau.jpeg -->
+  <div class="page-background"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="#accueil" class="brand-logo">
+        <img src="assets/logo_loulendo.jpg" alt="Logo Loulendo Gabriel" />
+        <div class="brand-text">
+          <span class="line1">Groupe Loulendo Gabriel</span>
+          <span class="line2">Province de Djiri</span>
+        </div>
+      </a>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#accueil" class="active" onclick="closeMenu()">Accueil</a></li>
+        <li><a href="meute-hathi.html" onclick="closeMenu()">Meute</a></li>
+        <li><a href="troupe.html" onclick="closeMenu()">Troupe</a></li>
+        <li><a href="galerie.html" onclick="closeMenu()">Galerie</a></li>
+        <li><a href="#actualites" onclick="closeMenu()">Actualités</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+
+      <div class="mobile-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section" id="accueil">
+      <div class="hero-banner">
+        <div class="hero-overlay-card">
+          <h1>Découvrez le Scoutisme à Djiri</h1>
+          <p>Scouting le scoutisme à Djiri - Congo-Brazzaville ...</p>
+          <a href="#branches" class="btn-hero">Découvrez le Scoutisme</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECTION NOS BRANCHES -->
+    <section id="branches">
+      <h2 class="section-title">Nos Branches</h2>
+      <div class="branches-grid">
+        
+        <!-- Carte 1: MEUTE -> redirige vers la page Meute Hathi -->
+        <a class="branch-link" href="meute-hathi.html">
+          <article class="branch-card">
+            <div class="branch-img-container">
+              <img src="assets/meute_uniform.jpg" alt="Uniforme Meute - Louveteaux" />
+            </div>
+            <div class="branch-info">
+              <h3>MEUTE</h3>
+              <p>(Louveteaux)</p>
+              <span class="branch-cta">Découvrir la meute Hathi <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+        </a>
+
+        <!-- Carte 2: TROUPE -> redirige vers la page Troupe -->
+        <a class="branch-link" href="troupe.html">
+          <article class="branch-card">
+            <div class="branch-img-container">
+              <img src="assets/troupe_uniform.jpg" alt="Uniforme Troupe - Éclaireurs" />
+            </div>
+            <div class="branch-info">
+              <h3>TROUPE</h3>
+              <p>(Éclaireurs)</p>
+              <span class="branch-cta">Découvrir la troupe <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+        </a>
+
+        <!-- Carte 3: CLAN -->
+        <article class="branch-card">
+          <div class="branch-img-container">
+            <img src="assets/clan_uniform.jpg" alt="Uniforme Clan - Routiers/Guides Aînées" />
+          </div>
+          <div class="branch-info">
+            <h3>CLAN</h3>
+            <p>(Routiers/Guides Aînées)</p>
+          </div>
+        </article>
+
+        <!-- Carte 4: FOULARD DU GROUPE (Utilisant foulard_groupe.jpg) -->
+        <article class="branch-card">
+          <div class="branch-img-container">
+            <img src="assets/foulard_groupe.jpg" alt="Foulard du Groupe Loulendo Gabriel - Province de Djiri" />
+          </div>
+          <div class="branch-info">
+            <h3>Foulard du Groupe</h3>
+            <p>Loulendo Gabriel -<br />Province de Djiri</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 4. SECTION NOS CHEFS DE GROUPE -->
+    <section id="notre-groupe">
+      <h2 class="section-title">Nos Chefs de Groupe</h2>
+      <div class="chefs-container">
+        
+        <div class="chefs-grid">
+          
+          <!-- Chef 1 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_1.jpg" alt="LOUBELO Isaac Japhet - Conseiller de Groupe" />
+            </div>
+            <div class="chef-info">
+              <div class="name">LOUBELO Isaac Japhet</div>
+              <div class="role">Conseiller de Groupe</div>
+              <div class="abbr">(CdG)</div>
+              <div class="totem">Totem Puma</div>
+            </div>
+          </article>
+
+          <!-- Chef 2 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_2.jpg" alt="LOUKABOU Marley Michael - Chef de Clan" />
+            </div>
+            <div class="chef-info">
+              <div class="name">LOUKABOU Marley Michael</div>
+              <div class="role">Chef de Clan</div>
+              <div class="abbr">(CC)</div>
+              <div class="totem">Totem Calmar</div>
+            </div>
+          </article>
+
+          <!-- Chef 3 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_3.jpg" alt="MAY OULOU Harthul Darius - Chef de Clan Adjoint" />
+            </div>
+            <div class="chef-info">
+              <div class="name">MAY OULOU Harthul Darius</div>
+              <div class="role">Chef de Clan</div>
+              <div class="abbr">Adjoint (CCA)</div>
+              <div class="totem">Totem Kangourou</div>
+            </div>
+          </article>
+
+          <!-- Chef 4 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_4.jpg" alt="LOUNDA BAYENI Dan Luzenn - Chef de Troupe" />
+            </div>
+            <div class="chef-info">
+              <div class="name">LOUNDA BAYENI Dan Luzenn</div>
+              <div class="role">Chef de Troupe</div>
+              <div class="abbr">(CT)</div>
+              <div class="totem">Totem Pic</div>
+            </div>
+          </article>
+
+          <!-- Chef 5 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_5.jpg" alt="EBADEP Laurel Ken - Chef de Troupe Adjoint" />
+            </div>
+            <div class="chef-info">
+              <div class="name">EBADEP Laurel Ken</div>
+              <div class="role">Chef de Troupe</div>
+              <div class="abbr">Adjoint (CTA)</div>
+              <div class="totem">Adjoint du chef de troupe</div>
+            </div>
+          </article>
+
+          <!-- Chef 6 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_6.jpg" alt="SHYELHO Messi Précieux - Chef de Meute" />
+            </div>
+            <div class="chef-info">
+              <div class="name">SHYELHO Messi Précieux</div>
+              <div class="role">Chef de Meute</div>
+              <div class="abbr">(CM)</div>
+              <div class="totem">Totem Raton</div>
+            </div>
+          </article>
+
+          <!-- Chef 7 -->
+          <article class="chef-card">
+            <div class="chef-img-box">
+              <img src="assets/chef_7.jpg" alt="MOUNDAMBI PELE Cyflore Princesse - Cheftaine de Meute adjointe" />
+            </div>
+            <div class="chef-info">
+              <div class="name">MOUNDAMBI PELE Cyflore Princesse</div>
+              <div class="role">Cheftaine de Meute</div>
+              <div class="abbr">Adjointe (CMA)</div>
+              <div class="totem">Adjointe du chef de meute</div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/logo_loulendo.jpg" alt="Logo Groupe Loulendo Gabriel" />
+        <div>
+          <div class="footer-brand-name">Groupe Loulendo Gabriel</div>
+          <div class="footer-brand-sub">Province de Djiri – Scouts du Congo-Brazzaville</div>
+          <div class="footer-brand-motto">Amour · Unité · Foi</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="meute-hathi.html">Meute</a></li>
+          <li><a href="troupe.html">Troupe</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-branches">
+        <h4>Nos Branches</h4>
+        <ul>
+          <li><a class="footer-branch-link" href="meute-hathi.html"><i class="fas fa-dog"></i> Meute (Louveteaux)</a></li>
+          <li><a class="footer-branch-link" href="troupe.html"><i class="fas fa-compass"></i> Troupe (Éclaireurs)</a></li>
+          <li><i class="fas fa-crown"></i> Clan (Routiers / Guides Aînées)</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact" id="contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-location-dot"></i> Djiri, Brazzaville<br />République du Congo</p>
+        <p><i class="fas fa-church"></i> Église Évangélique du Congo (EEC)</p>
+        <p class="footer-phone"><i class="fas fa-phone"></i> Contact<br />
+          <a href="tel:+242068631997">+242 06 86 31 99 7</a><br />
+          <a href="tel:+242068530050">+242 06 85 30 05 0</a><br />
+          <a href="tel:+242065172562">+242 06 51 72 56 2</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/1HmfNBSdxk/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://chat.whatsapp.com/KAX51OquFZG8IEDtu3JnJs" target="_blank" rel="noopener noreferrer" title="Groupe WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Groupe Scout Loulendo Gabriel – Province de Djiri. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('active');
+    }
+  </script>
+</body>
 </html>

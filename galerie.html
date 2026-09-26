@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie Photos | Groupe Loulendo Gabriel - Province de Djiri</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="galerie.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_loulendo.jpg" alt="Logo Loulendo Gabriel" />
+        <div class="brand-text">
+          <span class="line1">Groupe Loulendo Gabriel</span>
+          <span class="line2">Province de Djiri</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#accueil" onclick="closeMenu()">Accueil</a></li>
+        <li><a href="meute-hathi.html" onclick="closeMenu()">Meute</a></li>
+        <li><a href="troupe.html" onclick="closeMenu()">Troupe</a></li>
+        <li><a href="galerie.html" class="active" onclick="closeMenu()">Galerie</a></li>
+        <li><a href="index.html#actualites" onclick="closeMenu()">Actualités</a></li>
+        <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+
+      <div class="mobile-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+
+    <!-- HERO GALERIE -->
+    <section class="hero-section">
+      <div class="galerie-hero">
+        <div>
+          <h1>Galerie Photos</h1>
+          <p>
+            Toutes les photos de nos activités, camps et sorties
+            sont réunies ici. Cliquez sur une image pour l'ouvrir
+            en grand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE -->
+    <section id="galerie">
+      <div class="galerie-intro">
+        <h2>Nos moments en images</h2>
+        <p>Faites défiler la liste pour parcourir l'ensemble des photographies.</p>
+      </div>
+
+      <div class="galerie-frame" id="galerieFrame">
+        <div class="galerie-loading">
+          <span class="spinner"></span>
+          <span>Chargement des photographies…</span>
+        </div>
+
+        <iframe
+          id="galerieIframe"
+          src="https://drive.google.com/embeddedfolderview?id=1GgEznxr9oD4olEpJ5TeAl8hokL6SUefC#grid"
+          title="Galerie photos du groupe Loulendo Gabriel"
+          allow="autoplay"
+        ></iframe>
+      </div>
+
+      <p class="galerie-fallback">
+        Une photo ne s'affiche pas ?
+        <a href="https://drive.google.com/drive/folders/1GgEznxr9oD4olEpJ5TeAl8hokL6SUefC?usp=drive_link" target="_blank" rel="noopener">
+          Ouvrir la galerie dans un nouvel onglet
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/logo_loulendo.jpg" alt="Logo Groupe Loulendo Gabriel" />
+        <div>
+          <div class="footer-brand-name">Groupe Loulendo Gabriel</div>
+          <div class="footer-brand-sub">Province de Djiri – Scouts du Congo-Brazzaville</div>
+          <div class="footer-brand-motto">Amour · Unité · Foi</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#accueil">Accueil</a></li>
+          <li><a href="meute-hathi.html">Meute</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="index.html#actualites">Actualités</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-branches">
+        <h4>Nos Branches</h4>
+        <ul>
+          <li><a class="footer-branch-link" href="meute-hathi.html"><i class="fas fa-dog"></i> Meute (Louveteaux)</a></li>
+          <li><a href="troupe.html"><i class="fas fa-compass"></i> Troupe (Éclaireurs)</a></li>
+          <li><i class="fas fa-crown"></i> Clan (Routiers / Guides Aînées)</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact" id="contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-location-dot"></i> Djiri, Brazzaville<br />République du Congo</p>
+        <p><i class="fas fa-church"></i> Église Évangélique du Congo (EEC)</p>
+        <p class="footer-phone"><i class="fas fa-phone"></i> Contact<br />
+          <a href="tel:+242068631997">+242 06 86 31 99 7</a><br />
+          <a href="tel:+242068530050">+242 06 85 30 05 0</a><br />
+          <a href="tel:+242065172562">+242 06 51 72 56 2</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/1HmfNBSdxk/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://chat.whatsapp.com/KAX51OquFZG8IEDtu3JnJs" target="_blank" rel="noopener noreferrer" title="Groupe WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Groupe Scout Loulendo Gabriel – Province de Djiri. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('active');
+    }
+
+    // Masque l'indicateur de chargement une fois la galerie affichée
+    (function () {
+      var frame = document.getElementById('galerieFrame');
+      var iframe = document.getElementById('galerieIframe');
+
+      function hideLoader() {
+        frame.classList.add('loaded');
+      }
+
+      iframe.addEventListener('load', hideLoader);
+      setTimeout(hideLoader, 4000);
+    })();
+  </script>
+</body>
+</html>

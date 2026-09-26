@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troupe (Éclaireurs) | Groupe Loulendo Gabriel - Province de Djiri</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles : navbar / footer communs + styles de la page -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="troupe.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVBAR (identique à la page principale)
+       ========================================================= -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo_loulendo.jpg" alt="Logo Loulendo Gabriel" />
+        <div class="brand-text">
+          <span class="line1">Groupe Loulendo Gabriel</span>
+          <span class="line2">Province de Djiri</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#accueil" onclick="closeMenu()">Accueil</a></li>
+        <li><a href="meute-hathi.html" onclick="closeMenu()">Meute</a></li>
+        <li><a href="troupe.html" class="active" onclick="closeMenu()">Troupe</a></li>
+        <li><a href="galerie.html" onclick="closeMenu()">Galerie</a></li>
+        <li><a href="index.html#actualites" onclick="closeMenu()">Actualités</a></li>
+        <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+
+      <div class="mobile-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO — TROUPE (ÉCLAIREURS)
+         ===================================================== -->
+
+    <section class="troupe-hero">
+
+      <img
+        src="assets/image_troupe.jpeg"
+        alt="La troupe - Éclaireurs"
+        class="hero-image"
+      >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="hero-small-title">
+          TROUPE
+        </span>
+
+        <h1>
+          Les Éclaireurs,<br>
+          <span>l'âme du scoutisme !</span>
+        </h1>
+
+        <p>
+          La troupe est la première branche du scoutisme,
+          née à l'issue du camp expérimental sur l'île
+          de Brownsea en 1907. Elle en est la branche
+          maîtresse : l'éclaireur.
+        </p>
+
+        <a href="#presentation" class="hero-button">
+          Découvrir la troupe
+          <span><i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="index.html#branches" class="hero-back">
+          <span><i class="fas fa-arrow-left"></i></span>
+          Retour aux branches
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATIONS RAPIDES
+         ===================================================== -->
+
+    <section class="quick-info">
+
+      <div class="info-item">
+        <div class="info-icon blue">
+          <i class="fas fa-flag-checkered"></i>
+        </div>
+
+        <div>
+          <strong>Troupe</strong>
+          <small>la branche maîtresse</small>
+        </div>
+      </div>
+
+
+      <div class="info-item">
+        <div class="info-icon green">
+          <i class="fas fa-user-group"></i>
+        </div>
+
+        <div>
+          <strong>13 à 17 ans</strong>
+          <small>l'âge des éclaireurs</small>
+        </div>
+      </div>
+
+
+      <div class="info-item">
+        <div class="info-icon yellow">
+          <i class="fas fa-users"></i>
+        </div>
+
+        <div>
+          <strong>4 patrouilles</strong>
+          <small>3 masculines + 1 féminine</small>
+        </div>
+      </div>
+
+
+      <div class="info-item">
+        <div class="info-icon blue">
+          <i class="fas fa-ranking-star"></i>
+        </div>
+
+        <div>
+          <strong>5 étapes</strong>
+          <small>de progression</small>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRÉSENTATION DE LA TROUPE
+         ===================================================== -->
+
+    <section class="presentation section" id="presentation">
+
+      <div class="presentation-grid">
+
+        <div class="presentation-text">
+
+          <span class="section-label">
+            LA TROUPE
+          </span>
+
+          <h2>
+            Une branche maîtresse
+            du scoutisme
+          </h2>
+
+          <div class="troupe-logo">
+            <img
+              src="assets/logo_troupe.jpeg"
+              alt="Logo de la troupe - Éclaireurs"
+            >
+            <span>
+              Logo de la troupe
+            </span>
+          </div>
+
+          <p>
+            La troupe est une branche du scoutisme qui
+            accueille les jeunes garçons et filles dont
+            l'âge varie de <strong>13 à 17 ans</strong>.
+          </p>
+
+          <p>
+            Elle est la première branche du scoutisme,
+            née à l'issue du camp expérimental sur l'île
+            de Brownsea en 1907.
+          </p>
+
+          <p>
+            Elle peut fonctionner de manière autonome et
+            constitue l'âme vivante de la troupe. Ce sont
+            les patrouilles qui forment une troupe, et non
+            une troupe qui crée les patrouilles.
+          </p>
+
+          <div class="location-box">
+
+            <span class="location-title">
+              La troupe en bref
+            </span>
+
+            <p>
+              16 éclaireurs au minimum et 32 au maximum,
+              dirigés par un chef de troupe, suppléé par
+              un chef de troupe adjoint.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="presentation-image">
+
+          <img
+            src="assets/image_troupe.jpeg"
+            alt="Photo de la troupe - Éclaireurs"
+          >
+
+          <div class="image-caption">
+            <strong>Troupe</strong>
+            <span>
+              « L'éclaireur, la branche maîtresse du scoutisme »
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         L'ESPRIT DE LA TROUPE
+         ===================================================== -->
+
+    <section class="cri-section">
+
+      <div class="cri-container">
+
+        <div class="cri-symbol">
+          <i class="fas fa-quote-left"></i>
+        </div>
+
+        <div>
+          <span class="section-label light">
+            LE SYSTÈME DE PATROUILLE
+          </span>
+
+          <h2>
+            « Ce qui distingue la troupe des autres branches »
+          </h2>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ORGANISATION DE LA TROUPE
+         ===================================================== -->
+
+    <section class="section organisation">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          ORGANISATION
+        </span>
+
+        <h2>
+          Une troupe structurée
+        </h2>
+
+        <p>
+          La troupe est organisée par quatre organes.
+        </p>
+
+      </div>
+
+
+      <div class="organisation-grid">
+
+        <div class="organisation-card">
+
+          <div class="card-number">
+            01
+          </div>
+
+          <h3>
+            Le conseil de troupe
+          </h3>
+
+          <p>
+            La troupe fonctionne selon des règles
+            établies par le conseil de troupe.
+          </p>
+
+        </div>
+
+
+        <div class="organisation-card">
+
+          <div class="card-number">
+            02
+          </div>
+
+          <h3>
+            Le conseil de chef
+          </h3>
+
+          <p>
+            Il prépare la route et la prolonge.
+          </p>
+
+        </div>
+
+
+        <div class="organisation-card">
+
+          <div class="card-number">
+            03
+          </div>
+
+          <h3>
+            Le conseil de patrouille
+          </h3>
+
+          <p>
+            Des réunions de patrouilles permettent de
+            responsabiliser les jeunes responsables
+            des patrouilles et de mieux s'organiser
+            entre eux.
+          </p>
+
+        </div>
+
+
+        <div class="organisation-card">
+
+          <div class="card-number">
+            04
+          </div>
+
+          <h3>
+            Les postes d'actions
+          </h3>
+
+          <p>
+            Chaque membre de la troupe occupe un poste
+            d'action qui lui est propre.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LE PARCOURS DE L'ÉCLAIREUR
+         ===================================================== -->
+
+    <section class="history section">
+
+      <div class="history-grid">
+
+        <div class="history-image">
+
+          <img
+            src="assets/fleur_lys.jpeg"
+            alt="Fleur de lys des Scouts"
+          >
+
+        </div>
+
+
+        <div class="history-content">
+
+          <span class="section-label">
+            LE PARCOURS DE L'ÉCLAIREUR
+          </span>
+
+          <h2>
+            Les cinq étapes
+            de progression
+          </h2>
+
+          <p>
+            L'éclaireur compte seize (16) éclaireurs au
+            minimum et trente-deux (32) au maximum. Il est
+            dirigé par un chef de troupe, qui est suppléé
+            par un chef de troupe adjoint.
+          </p>
+
+          <p>
+            Le parcours compte cinq (5) étapes de
+            progression, de l'aspirant au noviciat.
+            Les brevets et le totem font partie des
+            récompenses du parcours scout à la troupe.
+          </p>
+
+          <div class="history-stat">
+
+            <strong>5</strong>
+
+            <span>
+              étapes
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LES CINQ ÉTAPES DE PROGRESSION
+         ===================================================== -->
+
+    <section class="animal-section section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          LA PROGRESSION
+        </span>
+
+        <h2>
+          Les cinq étapes de l'éclaireur
+        </h2>
+
+        <p>
+          Chaque étape franchie marque une progression
+          dans le parcours scout de la troupe.
+        </p>
+
+      </div>
+
+
+      <div class="animal-grid">
+
+        <div class="animal-card">
+
+          <div class="animal-icon">
+            1
+          </div>
+
+          <h3>
+            L'aspirant
+          </h3>
+
+          <p>
+            Première étape de la progression de
+            l'éclaireur au sein de la troupe.
+          </p>
+
+        </div>
+
+
+        <div class="animal-card">
+
+          <div class="animal-icon">
+            2
+          </div>
+
+          <h3>
+            La haute patrouille
+          </h3>
+
+          <p>
+            L'éclaireur accède à la haute patrouille
+            de sa progression.
+          </p>
+
+        </div>
+
+
+        <div class="animal-card">
+
+          <div class="animal-icon">
+            3
+          </div>
+
+          <h3>
+            La 2<sup>ème</sup> classe
+          </h3>
+
+          <p>
+            L'étape de la deuxième classe fait
+            partie du parcours de l'éclaireur.
+          </p>
+
+        </div>
+
+
+        <div class="animal-card">
+
+          <div class="animal-icon">
+            4
+          </div>
+
+          <h3>
+            La 1<sup>ère</sup> classe
+          </h3>
+
+          <p>
+            L'étape de la première classe vient
+            achever la progression avant le noviciat.
+          </p>
+
+        </div>
+
+
+        <div class="animal-card">
+
+          <div class="animal-icon">
+            5
+          </div>
+
+          <h3>
+            Le noviciat
+          </h3>
+
+          <p>
+            Le noviciat, dernière étape de la
+            progression, est récompensé par les
+            brevets et le totem.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LE FONCTIONNEMENT DE LA TROUPE
+         ===================================================== -->
+
+    <section class="uniform-section section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          LA TROUPE EN DETAIL
+        </span>
+
+        <h2>
+          Les éléments de la troupe
+        </h2>
+
+        <p>
+          Découvrez les différents éléments qui
+          composent la vie de la troupe.
+        </p>
+
+      </div>
+
+
+      <div class="uniform-grid">
+
+        <div class="uniform-image">
+
+          <img
+            src="assets/image2.jpeg"
+            alt="Détail de la tenue de l'éclaireur"
+          >
+
+        </div>
+
+
+        <div class="uniform-signs">
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              01
+            </div>
+
+            <div>
+              <h3>
+                La patrouille
+              </h3>
+              <p>
+                Un groupe de 6 à 8 jeunes âgés de
+                13 à 17 ans.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              02
+            </div>
+
+            <div>
+              <h3>
+                Le chef de patrouille
+              </h3>
+              <p>
+                La patrouille est dirigée par un chef
+                de patrouille (CP).
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              03
+            </div>
+
+            <div>
+              <h3>
+                Le second chef de patrouille
+              </h3>
+              <p>
+                Il seconde le chef de patrouille (SP).
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              04
+            </div>
+
+            <div>
+              <h3>
+                Le chef de troupe
+              </h3>
+              <p>
+                Il dirige la troupe et est
+                suppléé par un adjoint.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              05
+            </div>
+
+            <div>
+              <h3>
+                L'unité de patrouille
+              </h3>
+              <p>
+                Ce sont les patrouilles qui forment
+                une troupe, et non l'inverse.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              06
+            </div>
+
+            <div>
+              <h3>
+                La non-mixité
+              </h3>
+              <p>
+                Le système de patrouille ne permet
+                pas la mixité des patrouilles.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              07
+            </div>
+
+            <div>
+              <h3>
+                Le conseil de chef
+              </h3>
+              <p>
+                Il prépare la route et la prolonge.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              08
+            </div>
+
+            <div>
+              <h3>
+                Le conseil de patrouille
+              </h3>
+              <p>
+                Des réunions de patrouilles
+                responsabilisent les jeunes.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              09
+            </div>
+
+            <div>
+              <h3>
+                Les postes d'actions
+              </h3>
+              <p>
+                Chaque membre de la troupe tient
+                un poste d'action.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="sign-item">
+
+            <div class="sign-number">
+              10
+            </div>
+
+            <div>
+              <h3>
+                Les récompenses
+              </h3>
+              <p>
+                Les brevets et le totem font partie
+                des récompenses du parcours scout.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NOS PATROUILLEs
+         ===================================================== -->
+
+    <section class="symbols-section section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          NOS PATROUILLEs
+        </span>
+
+        <h2>
+          Quatre patrouilles
+        </h2>
+
+        <p>
+          Au sein de notre troupe, nous comptons quatre
+          (4) patrouilles.
+        </p>
+
+      </div>
+
+
+      <div class="symbols-grid">
+
+        <div class="symbol-card">
+
+          <span class="symbol-icon">
+            <i class="fas fa-paw"></i>
+          </span>
+
+          <h3>
+            Lionne
+          </h3>
+
+          <p>
+            Patrouille féminine de la troupe.
+          </p>
+
+        </div>
+
+
+        <div class="symbol-card">
+
+          <span class="symbol-icon">
+            <i class="fas fa-paw"></i>
+          </span>
+
+          <h3>
+            Puma
+          </h3>
+
+          <p>
+            Patrouille masculine de la troupe.
+          </p>
+
+        </div>
+
+
+        <div class="symbol-card">
+
+          <span class="symbol-icon">
+            <i class="fas fa-paw"></i>
+          </span>
+
+          <h3>
+            Caracal
+          </h3>
+
+          <p>
+            Patrouille masculine de la troupe.
+          </p>
+
+        </div>
+
+
+        <div class="symbol-card">
+
+          <span class="symbol-icon">
+            <i class="fas fa-paw"></i>
+          </span>
+
+          <h3>
+            Panthère
+          </h3>
+
+          <p>
+            Patrouille masculine de la troupe.
+          </p>
+
+        </div>
+
+
+        <div class="symbol-card">
+
+          <span class="symbol-icon">
+            <i class="fas fa-quote-right"></i>
+          </span>
+
+          <h3>
+            Une devise chacune
+          </h3>
+
+          <p>
+            Chaque patrouille compte sa propre devise.
+          </p>
+
+        </div>
+
+
+        <div class="symbol-card">
+
+          <span class="symbol-icon">
+            <i class="fas fa-venus-mars"></i>
+          </span>
+
+          <h3>
+            Pas de mixité
+          </h3>
+          <p>
+            Le système de patrouille ne permet pas
+            la mixité des patrouilles.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CE QUI DISTINGUE LA TROUPE
+         ===================================================== -->
+
+    <section class="limits-section section">
+
+      <div class="limits-content">
+
+        <span class="section-label">
+          LE SYSTÈME DE PATROUILLE
+        </span>
+
+        <h2>
+          La troupe et ses patrouilles
+        </h2>
+
+        <p>
+          La troupe fonctionne de la manière suivante :
+        </p>
+
+        <div class="limits-grid">
+
+          <div class="limit-card">
+            <strong>La troupe</strong>
+            <span>
+              Elle peut fonctionner de manière autonome
+              et constitue l'âme vivante de la troupe
+            </span>
+          </div>
+
+          <div class="limit-card">
+            <strong>La patrouille</strong>
+            <span>
+              L'unité de la troupe, dirigée par un CP
+              et un second chef de patrouille (SP)
+            </span>
+          </div>
+
+          <div class="limit-card">
+            <strong>L'éclaireur</strong>
+            <span>
+              16 éclaireurs au minimum et 32 au
+              maximum, âgés de 13 à 17 ans
+            </span>
+          </div>
+
+          <div class="limit-card">
+            <strong>L'insigne</strong>
+            <span>
+              Chaque patrouille a son nom, son flot,
+              son emblème, son cri ou devise et son fanion
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALERIE
+         ===================================================== -->
+
+    <section class="gallery-section section">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          LA TROUPE EN IMAGES
+        </span>
+
+        <h2>
+          La vie de la troupe
+        </h2>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+        <div class="gallery-large">
+
+          <img
+            src="assets/image_troupe.jpeg"
+            alt="La troupe - Éclaireurs"
+          >
+
+        </div>
+
+
+        <div class="gallery-small">
+
+          <img
+            src="assets/fleur_lys.jpeg"
+            alt="Fleur de lys des Scouts"
+          >
+
+        </div>
+
+
+        <div class="gallery-small">
+
+          <img
+            src="assets/image2.jpeg"
+            alt="Détail de la tenue de l'éclaireur"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER (identique à la page principale)
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/logo_loulendo.jpg" alt="Logo Groupe Loulendo Gabriel" />
+        <div>
+          <div class="footer-brand-name">Groupe Loulendo Gabriel</div>
+          <div class="footer-brand-sub">Province de Djiri – Scouts du Congo-Brazzaville</div>
+          <div class="footer-brand-motto">Amour · Unité · Foi</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#accueil">Accueil</a></li>
+          <li><a href="meute-hathi.html">Meute</a></li>
+          <li><a href="troupe.html">Troupe</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="index.html#actualites">Actualités</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-branches">
+        <h4>Nos Branches</h4>
+        <ul>
+          <li><a href="meute-hathi.html"><i class="fas fa-dog"></i> Meute (Louveteaux)</a></li>
+          <li><a href="troupe.html"><i class="fas fa-compass"></i> Troupe (Éclaireurs)</a></li>
+          <li><i class="fas fa-crown"></i> Clan (Routiers / Guides Aînées)</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact" id="contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-location-dot"></i> Djiri, Brazzaville<br />République du Congo</p>
+        <p><i class="fas fa-church"></i> Église Évangélique du Congo (EEC)</p>
+        <p class="footer-phone"><i class="fas fa-phone"></i> Contact<br />
+          <a href="tel:+242068631997">+242 06 86 31 99 7</a><br />
+          <a href="tel:+242068530050">+242 06 85 30 05 0</a><br />
+          <a href="tel:+242065172562">+242 06 51 72 56 2</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/1HmfNBSdxk/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://chat.whatsapp.com/KAX51OquFZG8IEDtu3JnJs" target="_blank" rel="noopener noreferrer" title="Groupe WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Groupe Scout Loulendo Gabriel – Province de Djiri. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('navMenu').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
