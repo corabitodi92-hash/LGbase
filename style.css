@@ -648,9 +648,9 @@ header {
   gap: 8px;
 }
 
-.footer-branches ul li i {
+.footer-branches ul li .ic {
   width: 16px;
-  font-size: 0.78rem;
+  height: 16px;
   color: #4B8B3B;
   flex-shrink: 0;
 }
@@ -690,10 +690,12 @@ header {
   transform: translateX(4px);
 }
 
-.footer-contact i {
+.footer-contact .ic {
   width: 16px;
+  height: 16px;
   margin-right: 6px;
   color: #4B8B3B;
+  flex-shrink: 0;
   text-align: center;
 }
 
@@ -752,6 +754,94 @@ header {
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+}
+
+/* =========================================================
+   ICONES SCOUT
+   Symboles dans public/icons-scout.svg (Material Design Icons).
+   Le 1em permet de recuperer le font-size du conteneur existant.
+   ========================================================= */
+
+.ic {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+}
+
+/* =========================================================
+   BOUTON RETOUR EN HAUT
+   Apparait quand on arrive en fin de page
+   ========================================================= */
+
+.to-top {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #4B8B3B;
+  color: #FFFFFF;
+
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+
+  z-index: 900;
+}
+
+.to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.to-top:hover {
+  background: #3A6F2C;
+  transform: translateY(-4px);
+}
+
+.to-top:focus-visible {
+  outline: 3px solid #F6C900;
+  outline-offset: 3px;
+}
+
+.to-top svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+@media (max-width: 520px) {
+  .to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .to-top svg {
+    width: 19px;
+    height: 19px;
   }
 }
 
