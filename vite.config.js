@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         meuteHathi: resolve(__dirname, 'meute-hathi.html'),
         troupe: resolve(__dirname, 'troupe.html'),
+        clan: resolve(__dirname, 'clan.html'),
         galerie: resolve(__dirname, 'galerie.html'),
       },
     },

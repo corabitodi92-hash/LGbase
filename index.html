@@ -36,6 +36,7 @@
         <li><a href="#accueil" class="active" onclick="closeMenu()">Accueil</a></li>
         <li><a href="meute-hathi.html" onclick="closeMenu()">Meute</a></li>
         <li><a href="troupe.html" onclick="closeMenu()">Troupe</a></li>
+        <li><a href="clan.html" onclick="closeMenu()">Clan</a></li>
         <li><a href="galerie.html" onclick="closeMenu()">Galerie</a></li>
         <li><a href="#actualites" onclick="closeMenu()">Actualités</a></li>
         <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
@@ -94,16 +95,19 @@
           </article>
         </a>
 
-        <!-- Carte 3: CLAN -->
-        <article class="branch-card">
-          <div class="branch-img-container">
-            <img src="assets/clan_uniform.jpg" alt="Uniforme Clan - Routiers/Guides Aînées" />
-          </div>
-          <div class="branch-info">
-            <h3>CLAN</h3>
-            <p>(Routiers/Guides Aînées)</p>
-          </div>
-        </article>
+        <!-- Carte 3: CLAN -> redirige vers la page Clan -->
+        <a class="branch-link" href="clan.html">
+          <article class="branch-card">
+            <div class="branch-img-container">
+              <img src="assets/clan_uniform.jpg" alt="Uniforme Clan - Routiers/Guides Aînées" />
+            </div>
+            <div class="branch-info">
+              <h3>CLAN</h3>
+              <p>(Routiers/Guides Aînées)</p>
+              <span class="branch-cta">Découvrir le clan <i class="fas fa-arrow-right"></i></span>
+            </div>
+          </article>
+        </a>
 
         <!-- Carte 4: FOULARD DU GROUPE (Utilisant foulard_groupe.jpg) -->
         <article class="branch-card">
@@ -243,6 +247,7 @@
           <li><a href="#accueil">Accueil</a></li>
           <li><a href="meute-hathi.html">Meute</a></li>
           <li><a href="troupe.html">Troupe</a></li>
+          <li><a href="clan.html">Clan</a></li>
           <li><a href="galerie.html">Galerie</a></li>
           <li><a href="#actualites">Actualités</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -254,7 +259,7 @@
         <ul>
           <li><a class="footer-branch-link" href="meute-hathi.html"><i class="fas fa-dog"></i> Meute (Louveteaux)</a></li>
           <li><a class="footer-branch-link" href="troupe.html"><i class="fas fa-compass"></i> Troupe (Éclaireurs)</a></li>
-          <li><i class="fas fa-crown"></i> Clan (Routiers / Guides Aînées)</li>
+          <li><a class="footer-branch-link" href="clan.html"><i class="fas fa-crown"></i> Clan (Routiers / Guides Aînées)</a></li>
         </ul>
       </div>
 
