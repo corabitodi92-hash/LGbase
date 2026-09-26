@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Images brutes de travail (non utilisees par le site)
+/*.png
+/*.jpg
+/*.jpeg
